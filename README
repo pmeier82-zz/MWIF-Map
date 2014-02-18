@@ -1,4 +1,4 @@
-WIFM-Map is a reconstruction of the world map from the files of the Game: "Matrix World in Flames".
+WIFM-Map is a reconstruction of the world map of: "Matrix World in Flames".
 
 Aim of the project are to produce a SVG representation of the MWIF world map and to prototype algorithms to
 calculate various game relevant metrics. It might encourage improvements to MWIF itself or lead to a spin off
