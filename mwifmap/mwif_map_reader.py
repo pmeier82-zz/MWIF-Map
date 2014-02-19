@@ -9,10 +9,16 @@ the back of the Player's Manual Vol. 2, and have been adjusted to match reality 
 
 import os
 from hexmap import HexMap
+from ConfigParser import ConfigParser
 
 ## CONSTANTS
 
-MAP_DIR = "/media/pmeier/34DA13FADA13B758/Matrix Games/World in Flames/Data/Map Data"
+cp = ConfigParser()
+cp.read(["settings.cfg", "./settings.cfg", "./mwifmap/settings.cfg"])
+BASE_PATH = cp.get("filesystem", "basepath")
+del cp
+
+MAP_DIR = os.path.join(BASE_PATH, "Data", "Map Data")
 MAP_NAME = "Standard Map"
 
 FILE_ADJ = "{map_name} ADJ.CSV" # adjacency map for sea zones
